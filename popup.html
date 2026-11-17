@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GM UID & Shorten Link</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="logo.png" alt="GM Logo" class="app-logo">
+      <div class="header-text">
+        <h1>GM Tools</h1>
+        <span>Dò UID Facebook & Rút gọn Link</span>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-target="tab-uid">Dò UID Facebook</button>
+      <button class="tab-btn" data-target="tab-shorten">Rút gọn Link</button>
+    </div>
+
+    <!-- Tab 1: Dò tìm UID -->
+    <div id="tab-uid" class="tab-content active">
+      <label for="fb-url">Link Facebook (Profile, Fanpage, Group):</label>
+      <input type="text" id="fb-url" placeholder="https://www.facebook.com/username...">
+
+      <div class="btn-group">
+        <button id="btn-scan-tab" class="btn secondary">Lấy từ Tab đang mở</button>
+        <button id="btn-find-uid" class="btn primary">Dò UID từ Link</button>
+      </div>
+
+      <div id="uid-result-box" class="result-box hidden">
+        <span class="label">UID tìm được:</span>
+        <div class="copy-row">
+          <input type="text" id="uid-output" readonly>
+          <button id="btn-copy-uid" class="btn copy">Copy</button>
+        </div>
+      </div>
+      <p id="uid-status" class="status-msg"></p>
+    </div>
+
+    <!-- Tab 2: Rút gọn Link -->
+    <div id="tab-shorten" class="tab-content">
+      <label for="long-url">Nhập URL cần rút gọn:</label>
+      <input type="text" id="long-url" placeholder="https://example.com/duong-dan-rat-dai...">
+
+      <button id="btn-shorten" class="btn primary full-width">Rút gọn Link ngay</button>
+
+      <div id="shorten-result-box" class="result-box hidden">
+        <span class="label">Link rút gọn:</span>
+        <div class="copy-row">
+          <input type="text" id="short-output" readonly>
+          <button id="btn-copy-short" class="btn copy">Copy</button>
+        </div>
+      </div>
+      <p id="shorten-status" class="status-msg"></p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

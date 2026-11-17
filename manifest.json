@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "GM UID Finder & Link Shortener",
+  "version": "1.0",
+  "description": "Dò tìm chính xác UID Facebook (Profile, Fanpage, Group) và rút gọn link nhanh.",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.facebook.com/*",
+    "https://is.gd/*",
+    "https://tinyurl.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GM UID & Rút gọn Link",
+    "default_icon": "logo.png"
+  }
+}
